@@ -28,19 +28,19 @@ const page = usePage();
             </nav>
             </header>
                
-
+ 
         <!-- Hero Section -->
         <section class="bg-gradient-to-r from-pink-400 via-red-400 to-orange-400 text-white">
             <div class="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center justify-between">
                 <div class="flex items-center justify-between mt-4">
                 <div class="flex items-center">
-                    <img src="/images/Gui-logo.png" alt="Logo" class="h-25 mr-2">
+                    <img src="/images/Rl.jpg" alt="Logo" class=" h-20 mr-4">
                 </div>
             </div>
                 <!-- Left Content -->
                 <div class="w-full md:w-1/2 text-center md:text-left">
                     <h4 class="uppercase text-sm tracking-widest mb-2">Request Certification Form</h4>
-                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Barangay Certification Online Request
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Certificate Online Request
                         System</h1>
                 </div>
                 <!-- Right Image -->
@@ -51,7 +51,7 @@ const page = usePage();
 
         <!-- Info Section -->
         <section class="py-13 px-6 text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">Barangay Certification Online Request System</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Certification Online Request System</h2>
             <h3 class="text-xl font-semibold text-gray-800 mb-2">Request your certificate online</h3>
             <p class="text-xl font-semibold text-gray-800 mb-2">For future development and enhancing the society's needs. What are
                 you waiting for?</p>
