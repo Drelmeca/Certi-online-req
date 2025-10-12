@@ -34,10 +34,6 @@ const CertRequest = reactive({
 });
 const breadcrumbs: BreadcrumbItem[] = [
     {
-        title: 'Dashboard',
-        href: '/dashboard',
-    },
-    {
         title: 'All Requests',
         href: '/CertRequest',
     },

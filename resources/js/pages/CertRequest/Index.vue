@@ -3,9 +3,6 @@ import AppLayout from '@/layouts/AppLayout.vue';
 import { Head, Link, router } from '@inertiajs/vue3';
 import { type BreadcrumbItem } from '@/types';
 const breadcrumbs = [
-    { title: 'Dashboard',
-     href: '/dashboard'
-    },
      
     { title: 'All Request', 
     href: '/CertRequest'
