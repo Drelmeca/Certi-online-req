@@ -2,21 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\RequestCert;
+use App\Models\CertRequest;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 class CertRequestController extends Controller
 {
-
     public function index()
     {
-        $appSettings = [
-            'barangay' => 'Guinacot',
-            'province' => 'Cebu',
-            'city' => 'Danao City',
-        ];
+        $CertRequests = CertRequest::all();
+        
         return Inertia::render('CertRequest/Index', [
-            'appSettings' => $appSettings,
+            'CertRequests' => $CertRequests,
         ]);
     }
     public function create()
@@ -33,7 +29,7 @@ class CertRequestController extends Controller
             'appSettings' => $appSettings,
         ]);
     }
-    public function store(Request $request)
+    public function store(CertRequest $request)
     {
         // Validate the request data
         $request->validate([
@@ -51,23 +47,23 @@ class CertRequestController extends Controller
 
         if ($request->input('id')) {
             // Update existing record
-            $allrequest = RequestCert::findOrFail($request->input('id'));
-            $allrequest->first_name = $request->input('first_name');
-            $allrequest->middle_name = $request->input('middle_name');
-            $allrequest->last_name = $request->input('last_name');
-            $allrequest->suffix = $request->input('suffix');
-            $allrequest->request_type = $request->input('request_type');
-            $allrequest->request_purpose = $request->input('request_purpose');
-            $allrequest->purok = $request->input('purok');
-            $allrequest->contact_number = $request->input('contact_number');;
-            $allrequest->save();
+            $CertRequests = CertRequest::findOrFail($request->input('id'));
+            $CertRequests->first_name = $request->input('first_name');
+            $CertRequests->middle_name = $request->input('middle_name');
+            $CertRequests->last_name = $request->input('last_name');
+            $CertRequests->suffix = $request->input('suffix');
+            $CertRequests->request_type = $request->input('request_type');
+            $CertRequests->request_purpose = $request->input('request_purpose');
+            $CertRequests->purok = $request->input('purok');
+            $CertRequests->contact_number = $request->input('contact_number');;
+            $CertRequests->save();
             return response()->json([
                 'success' => true,
                 'message' => 'Data updated successfully.',
             ]);
         } else {
             // Create new record
-            $requestCert = new RequestCert();
+            $requestCert = new CertRequest();
             $requestCert->first_name = $request->input('first_name');
             $requestCert->middle_name = $request->input('middle_name');
             $requestCert->last_name = $request->input('last_name');
@@ -93,9 +89,9 @@ class CertRequestController extends Controller
             'province' => 'Cebu',
             'city' => 'Danao City',
         ];
-        $allreq = RequestCert::where('id', $id)->first();
-        return inertia('allrequest/Edit', [
-            'user' => $allreq,
+        $CertRequests = CertRequest::where('id', $id)->first();
+        return Inertia::render('CertRequest/Edit', [
+            'person' => $CertRequests,
             'mode' => 'edit',
             'userType' => 'user',
             'appSettings' => $appSettings,

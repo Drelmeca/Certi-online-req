@@ -20,7 +20,10 @@ class UserController extends Controller
 
     public function create()
     {
-        return inertia('User/Edit', ['person' => null, 'mode' => 'create']);
+        return inertia('User/Edit', [
+            'person' => null,
+            'mode' => 'create'
+        ]);
     }
     public function store(Request $request)
     {

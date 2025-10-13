@@ -16,6 +16,9 @@ interface CertRequestItem {
     middle_name: string;
     last_name: string;
     purok: string;
+    barangay: string;
+    city: string;
+    province: string;
     contact_number: string;
     email: string;
     request_type: string;

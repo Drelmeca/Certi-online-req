@@ -26,10 +26,10 @@ Route::group(['auth', 'verified'], function(){
     Route::post('/sample-crud/store',[\App\Http\Controllers\SampleCrudController::class,'store'])->name('sample-crud.store');
 
     
-    Route::get('/CertRequest',[\App\Http\Controllers\CertRequestController::class,'index'])->name('CertRequest');
-    Route::get('/CertRequest/create',[\App\Http\Controllers\CertRequestController::class,'create'])->name('CertRequest.create'); 
-    Route::get('/CertRequest/edit/{id}',[\App\Http\Controllers\CertRequestController::class,'edit'])->name('CertRequest.edit');
-    Route::post('/CertRequest/store',[\App\Http\Controllers\CertRequestController::class,'store'])->name('CertRequest.store');
+    Route::get('/CertRequest',[\App\Http\Controllers\CertRequestController::class,'index'])->name('certrequest');
+    Route::get('/CertRequest/create',[\App\Http\Controllers\CertRequestController::class,'create'])->name('certrequest.create'); 
+    Route::get('/CertRequest/edit/{id}',[\App\Http\Controllers\CertRequestController::class,'edit'])->name('certrequest.edit');
+    Route::post('/CertRequest/store',[\App\Http\Controllers\CertRequestController::class,'store'])->name('certrequest.store');
 });
 
 
