@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CertRequest;
 use App\Models\User;
-use App\Models\RequestCert;
 use Inertia\Inertia;
 
 class DashboardController extends Controller
@@ -15,8 +15,8 @@ class DashboardController extends Controller
         }
 
         // Example: Get counts from your tables
-        $totalClaims = RequestCert::where('status',  1)->count();
-        $pendingRequests = RequestCert::where('status', 0)->count();
+        $totalClaims = CertRequest::where('status',  1)->count();
+        $pendingRequests = CertRequest::where('status', 0)->count();
         $totalAdmins = User::where('role', 2)->count();
 
         return Inertia::render('Dashboard', [
