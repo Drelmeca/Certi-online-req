@@ -17,9 +17,16 @@ class CertRequestController extends Controller
     }
     public function create()
     {
+          $appSettings = [
+            'barangay' => 'Guinacot',
+            'province' => 'Cebu',
+            'city' => 'Danao City',
+          ];
         return inertia('CertRequest/Edit', [
             'person' => null,
             'mode' => 'create',
+             'userType' => 'user',
+            'appSettings' => $appSettings,
         ]);
     }
     public function store(CertRequest $request)
@@ -77,12 +84,17 @@ class CertRequestController extends Controller
 
     public function edit($id)
     {
-       
+        $appSettings = [
+            'barangay' => 'Guinacot',
+            'province' => 'Cebu',
+            'city' => 'Danao City',
+        ];
         $CertRequest = CertRequest::where('id', $id)->first();
         return Inertia::render('CertRequest/Edit', [
             'person' => $CertRequest,
             'mode' => 'edit',
-           
+            'userType' => 'user',
+            'appSettings' => $appSettings,
         ]);
     }
 
