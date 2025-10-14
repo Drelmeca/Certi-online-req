@@ -4,7 +4,7 @@ import { Head, Link, router } from '@inertiajs/vue3';
 import { type BreadcrumbItem } from '@/types';
 const breadcrumbs = [
      
-    { title: 'All Request', 
+    { title: 'My Request', 
     href: '/CertRequest'
     },   
 ];
@@ -43,7 +43,7 @@ const onEdit = (id) => {
 
    <AppLayout :breadcrumbs="breadcrumbs">
         <div class="flex items-center justify-between mb-4">
-            <h1 class="text-2xl font-bold">Request</h1>
+            <h1 class="text-2xl font-bold">My Request</h1>
             <Link href="/CertRequest/create" class="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                 Create Request
             </Link>

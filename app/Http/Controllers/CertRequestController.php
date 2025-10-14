@@ -29,7 +29,7 @@ class CertRequestController extends Controller
             'appSettings' => $appSettings,
         ]);
     }
-    public function store(CertRequest $request)
+    public function store(Request $request)
     {
         // Validate the request data
         $request->validate([

@@ -63,7 +63,7 @@ const onEdit = (id) => {
                             </td>
                             <td class="px-6 py-4">
                                 <span v-if="user.role === 2" class="text-blue-600">Admin-user</span>
-                                <span v-else-if="user.role === 1" class="text-yellow-600">User</span>
+                                <span v-else-if="user.role === 1" class="text-yellow-600">Guest</span>
                                 <span v-else class="text-gray-600">Guest</span>
                             </td>
                             <td class="px-6 py-4">

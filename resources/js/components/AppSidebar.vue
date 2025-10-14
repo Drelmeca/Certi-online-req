@@ -29,7 +29,7 @@ if (role === 'admin' || role === 2) {
             } as NavItem,
             {
                 title: 'All Requests',
-                href: '/Cert-Request',
+                href: '/CertRequest',
                 icon: LayoutGrid,
             } as NavItem,
             {
