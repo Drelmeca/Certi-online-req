@@ -11,7 +11,7 @@ class DashboardController extends Controller
     public function index()
     {
         if (auth()->user()->role == 1) {
-            return redirect()->route('CertRequest');
+            return redirect()->route('certrequest');
         }
 
         // Example: Get counts from your tables
