@@ -15,16 +15,20 @@ interface CertRequestItem {
     first_name: string;
     middle_name: string;
     last_name: string;
+    suffix: string;
+    email: string;
     purok: string;
     barangay: string;
     city: string;
     province: string;
+    date_of_birth: number;
     contact_number: string;
-    email: string;
     request_type: string;
     request_purpose: string;
+    civilstatus: string;
+    inBrgy: string;
     request_date: string;
-    status: string;
+   
 }
 
 defineProps<{ CertRequest: CertRequestItem[] }>();
@@ -55,17 +59,16 @@ const onEdit = (id) => {
                         <th class="px-6 py-3">First Name</th>
                         <th class="px-6 py-3">Middle Name</th>
                         <th class="px-6 py-3">Last Name</th>
-                        <th class="px-6 py-3">Purok</th>
-                        <th class="px-6 py-3">Barangay</th>
-                        <th class="px-6 py-3">City</th>
-                        <th class="px-6 py-3">Province</th>
-                        <th class="px-6 py-3">Contact Number</th>
+                        <th class="px-6 py-3">Suffix</th>
                         <th class="px-6 py-3">Email</th>
+                        <th class="px-6 py-3">Purok</th>
+                        <th class="px-6 py-3">Date of birth</th>
+                        <th class="px-6 py-3">Contact Number</th>
                         <th class="px-6 py-3">Request Type</th>
                         <th class="px-6 py-3">Request Purpose</th>
+                        <th class="px-6 py-3">Civil status</th>
+                        <th class="px-6 py-3">Month/Year in Barangay</th>
                         <th class="px-6 py-3">Request Date</th>
-                        <th class="px-6 py-3">Status</th>
-                        
                     </tr>
                 </thead>
                 <tbody>
@@ -73,14 +76,15 @@ const onEdit = (id) => {
                         <td class="px-6 py-4">{{ row.first_name }}</td>
                         <td class="px-6 py-4">{{ row.middle_name }}</td>
                         <td class="px-6 py-4">{{ row.last_name }}</td>
-                        <td class="px-6 py-4">{{ row.purok }}</td>
-                         <td class="px-6 py-4">{{ row.barangay }}</td>
-                          <td class="px-6 py-4">{{ row.city }}</td>
-                          <td class="px-6 py-4">{{ row.province }}</td>
-                          <td class="px-6 py-4">{{ row.contact_number }}</td>
+                        <td class="px-6 py-4">{{ row.suffix }}</td>
                         <td class="px-6 py-4">{{ row.email }}</td>
+                        <td class="px-6 py-4">{{ row.purok }}</td>
+                        <td class="px-6 py-4">{{ row.date_of_birth }}</td>
+                        <td class="px-6 py-4">{{ row.contact_number }}</td>
                         <td class="px-6 py-4">{{ row.request_type }}</td>
                         <td class="px-6 py-4">{{ row.request_purpose }}</td>
+                        <td class="px-6 py-4">{{ row.civilstatus }}</td>
+                        <td class="px-6 py-4">{{ row.inBrgy }}</td>
                         <td class="px-6 py-4">{{ row.request_date }}</td>
                         
                         <td class="px-6 py-4">
@@ -88,11 +92,6 @@ const onEdit = (id) => {
                             <span v-else-if="row.status === 'pending'" class="text-yellow-600">Pending</span>
                             <span v-else class="text-red-600">Rejected</span>
                         </td>
-                         <td class="px-6 py-4">
-                                <button class="text-blue-600 hover:text-blue-900 dark:text-blue-500 dark:hover:text-blue-400" @click="onEdit(row.id)">Edit</button>
-                                &nbsp;|&nbsp;
-                                <button class="text-red-600 hover:text-red-900 dark:text-red-500 dark:hover:text-red-400">Delete</button>
-                            </td>
 
                     </tr>
                 </tbody>
