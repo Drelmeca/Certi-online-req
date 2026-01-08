@@ -17,18 +17,18 @@ const CertRequest = reactive({
     middle_name: '',
     last_name: '',
     suffix: '',
+    email: '',
+    contact_number: '',
     purok: '',
     barangay: props.appSettings.barangay,
     city: props.appSettings.city,
     province: props.appSettings.province,
     date_of_birth: '',
-    contact_number: '',
     request_type: '',
     request_purpose: '',
-    civilstatus: null,
-    status: 0,
-    email: '',
-    inBryg: '',
+    civilstatus: '',
+    inBrgy: '',
+    request_date: '',
     isValidateInformation: false,
     success: false,
 });
@@ -88,8 +88,9 @@ onMounted(() => {
         CertRequest.date_of_birth = props.person.date_of_birth || '';
         CertRequest.request_type = props.person.request_type || '';
         CertRequest.request_purpose = props.person.request_purpose || '';
-        CertRequest.civilstatus = props.person.civilstatus || null;
-        CertRequest.inBryg = props.person.inBryg || '';
+        CertRequest.civilstatus = props.person.civilstatus || '';
+        CertRequest.inBrgy = props.person.inBrgy || '';
+        CertRequest.request_date = props.person.request_date ||'';
     }
 });
 
@@ -221,8 +222,13 @@ const handleFileUpload = (event: Event) => {
                                 </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700">Month/Yrs in Barangay</label>
-                                    <input type="text" v-model="CertRequest.inBryg"
+                                    <input type="text" v-model="CertRequest.inBrgy"
                                         class="mt-1 block w-full text-black  border border-gray-300 rounded-md shadow-sm px-3 py-2" />
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700">Request Date</label>
+                                    <input type="date" v-model="CertRequest.request_date"
+                                        class="mt-1 text-black  block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2" />
                                 </div>
                             </div>
                             <div>
