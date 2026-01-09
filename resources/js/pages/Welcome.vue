@@ -12,8 +12,8 @@ const page = usePage();
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     </Head>
     <div> 
-        <header class="bg-white w-full">
-            <nav class="flex items-center justify-end gap-3">
+        <header class="bg-black w-full">
+            <nav class="flex items-center justify-end gap-5">
                 <Link v-if="page.props?.auth?.user" :href="route('dashboard')"
                     class="inline-block rounded-sm border border-transparent px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#19140035] dark:text-[#EDEDEC] dark:hover:border-[#3E3E3A]">
                 </Link>
@@ -30,7 +30,7 @@ const page = usePage();
                
  
         <!-- Hero Section -->
-        <section class="bg-gradient-to-r from-pink-400 via-red-400 to-orange-400 text-white">
+        <section class="bg-gradient-to-t from-blue-400 via-red-400 to-orange-400 text-white">
             <div class="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center justify-between">
                 <div class="flex items-center justify-between mt-4">
                 <div class="flex items-center">
@@ -51,10 +51,9 @@ const page = usePage();
 
         <!-- Info Section -->
         <section class="py-13 px-6 text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">Certification Online Request System</h2>
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Certificate Online-Request System</h2>
             <h3 class="text-xl font-semibold text-gray-800 mb-2">Request your certificate online</h3>
-            <p class="text-xl font-semibold text-gray-800 mb-2">For future development and enhancing the society's needs. What are
-                you waiting for?</p>
+            <p class="text-xl font-semibold text-gray-800 mb-2">For future development and enhancing the society's needs.</p>
             <p>All rights reserved S.Y 2025-2026</p>
         </section>
      </section>
