@@ -34,7 +34,7 @@ const page = usePage();
             <div class="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center justify-between">
                 <div class="flex items-center justify-between mt-4">
                 <div class="flex items-center">
-                    <img src="/images/Rl.jpg" alt="Logo" class=" h-20 mr-4">
+                    <img src="/images/RL.png" alt="Logo" class=" h-20 mr-5">
                 </div>
             </div>
                 <!-- Left Content -->
