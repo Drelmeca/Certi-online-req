@@ -13,7 +13,7 @@ import {
 import { computed, type HTMLAttributes } from 'vue';
 import { sheetVariants, type SheetVariants } from '.';
 
-interface SheetContentProps extends DialogContentProps {
+interface SheetContentProps extends /* @vue-ignore */ DialogContentProps {
     class?: HTMLAttributes['class'];
     side?: SheetVariants['side'];
 }
