@@ -11,7 +11,7 @@ const page = usePage();
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     </Head>
-    <div> 
+    <div>
         <header class="bg-black w-full">
             <nav class="flex items-center justify-end gap-5">
                 <Link v-if="page.props?.auth?.user" :href="route('dashboard')"
@@ -19,28 +19,28 @@ const page = usePage();
                 </Link>
                 <template v-else>
                     <Link :href="route('login')"
-                    class=" bg-white text-blue solid-block square-m border border-[#28140035] px-5 py-1.5 leading-normal text-black hover:border-[#1915014a] dark:border-[#3E3E3A] dark:hover:border-[#62605b]">
-                  Login</Link>
+                        class=" bg-white text-blue solid-block square-m border border-[#28140035] px-5 py-1.5 leading-normal text-black hover:border-[#1915014a] dark:border-[#3E3E3A] dark:hover:border-[#62605b]">
+                        Login</Link>
                 </template>
                 <Link :href="route('register')"
                     class=" bg-white text-blue solid-block square-m border border-[#28140035] px-5 py-1.5 leading-normal text-black hover:border-[#1915014a] dark:border-[#3E3E3A] dark:hover:border-[#62605b]">
-                Register</Link>
+                    Register</Link>
             </nav>
-            </header>
-               
- 
+        </header>
+
+
         <!-- Hero Section -->
         <section class="bg-gradient-to-t from-blue-400 via-red-400 to-orange-400 text-white">
             <div class="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center justify-between">
                 <div class="flex items-center justify-between mt-4">
-                <div class="flex items-center">
-                    <img src="/images/Rl.jpg" alt="Logo" class=" h-20 mr-4">
+                    <div class="flex items-center">
+                        <img src="/images/group2.jpg" alt="Logo" class=" h-20 mr-4">
+                    </div>
                 </div>
-            </div>
                 <!-- Left Content -->
                 <div class="w-full md:w-1/2 text-center md:text-left">
                     <h4 class="uppercase text-sm tracking-widest mb-2">Request Certification Form</h4>
-                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Certificate Online Request
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Student Certificate Online Request
                         System</h1>
                 </div>
                 <!-- Right Image -->
@@ -49,13 +49,15 @@ const page = usePage();
                 </div>
             </div>
 
-        <!-- Info Section -->
-        <section class="py-13 px-6 text-center">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">Certificate Online-Request System</h2>
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">Request your certificate online</h3>
-            <p class="text-xl font-semibold text-gray-800 mb-2">For future development and enhancing the society's needs.</p>
-            <p>All rights reserved S.Y 2025-2026</p>
+            <!-- Info Section -->
+            <section class="py-13 px-6 text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Student-Certificate Online-Request System</h2>
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Request your certificate online</h3>
+                <p class="text-xl font-semibold text-gray-800 mb-2">For future development and enhancing the society's
+                    needs.
+                </p>
+                <p>All rights reserved S.Y 2025-2026</p>
+            </section>
         </section>
-     </section>
     </div>
 </template>

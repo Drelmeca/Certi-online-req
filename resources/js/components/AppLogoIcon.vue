@@ -14,6 +14,10 @@ defineProps<Props>();
 
 <template>
     <div class="flex items-center">
+<<<<<<< Updated upstream
                     <img src="/images/??.jpg" alt="Logo" class="h-25 mr-3">
+=======
+                    <img src="/images/group2.jpg" alt="Logo" class="h-25 mr-3">
+>>>>>>> Stashed changes
                 </div>
 </template>
