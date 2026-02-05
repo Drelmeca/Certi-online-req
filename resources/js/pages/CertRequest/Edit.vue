@@ -19,15 +19,8 @@ const CertRequest = reactive({
     suffix: '',
     email: '',
     contact_number: '',
-    purok: '',
-    barangay: props.appSettings.barangay,
-    city: props.appSettings.city,
-    province: props.appSettings.province,
-    date_of_birth: '',
     request_type: '',
     request_purpose: '',
-    civilstatus: '',
-    inBrgy: '',
     request_date: '',
     isValidateInformation: false,
     success: false,
@@ -59,9 +52,10 @@ const createCertRequest = () => {
             CertRequest.middle_name = '';
             CertRequest.last_name = '';
             CertRequest.suffix = '';
-            CertRequest.purok = '';
             CertRequest.email = '';
             CertRequest.contact_number = '';
+            CertRequest.request_type = '';
+            CertRequest.request_purpose = '';
 
             router.visit('/CertRequest'); // Redirect to the index page after creation
             // Optionally, redirect or show a success message
@@ -81,15 +75,8 @@ onMounted(() => {
         CertRequest.suffix = props.person.suffix || '';
         CertRequest.email = props.person.email || '';
         CertRequest.contact_number = props.person.contact_number || '';
-        CertRequest.purok = props.person.purok || '';
-        CertRequest.barangay = props.person.barangay || props.appSettings.barangay;
-        CertRequest.city = props.person.city || props.appSettings.city;
-        CertRequest.province = props.person.province || props.appSettings.province;
-        CertRequest.date_of_birth = props.person.date_of_birth || '';
         CertRequest.request_type = props.person.request_type || '';
         CertRequest.request_purpose = props.person.request_purpose || '';
-        CertRequest.civilstatus = props.person.civilstatus || '';
-        CertRequest.inBrgy = props.person.inBrgy || '';
         CertRequest.request_date = props.person.request_date ||'';
     }
 });
@@ -151,35 +138,8 @@ const handleFileUpload = (event: Event) => {
                                     class="mt-1 block w-full text-black  border border-gray-300 rounded-md shadow-sm px-3 py-2 focus:ring-blue-500 focus:border-blue-500" />
                             </div>
 
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700">Purok</label>
-                                    <input type="text" v-model="CertRequest.purok"
-                                        class="mt-1 block w-full border text-black  border-gray-300 rounded-md shadow-sm px-3 py-2" />
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700">Barangay</label>
-                                    <input type="text" disabled v-model="CertRequest.barangay"
-                                        class="mt-1 block w-full border text-black  border-gray-300 rounded-md shadow-sm px-3 py-2" />
-                                </div>
-                            </div>
-
+                           
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700">City</label>
-                                    <input type="text" disabled v-model="CertRequest.city"
-                                        class="mt-1 text-black  block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2" />
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700">Province</label>
-                                    <input type="text" disabled v-model="CertRequest.province"
-                                        class="mt-1 text-black  block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2" />
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700">Date of Birth</label>
-                                    <input type="date" v-model="CertRequest.date_of_birth"
-                                        class="mt-1 text-black  block w-full border border-gray-300 rounded-md shadow-sm px-3 py-2" />
-                                </div>
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700">Contact Number</label>
                                     <input type="text"
@@ -193,7 +153,7 @@ const handleFileUpload = (event: Event) => {
                                     <select v-model="CertRequest.request_type"
                                         class="mt-1 block w-full text-black  border border-gray-300 rounded-md shadow-sm px-3 py-2">
                                         <option value="0">Certificate</option>
-                                        <option value="1">Indigency</option>
+                                        <option value="1">Goodmoral</option>
                                         <option value="2">Clearance</option>
                                         <option value="3">Other</option>
                                     </select>
@@ -201,28 +161,6 @@ const handleFileUpload = (event: Event) => {
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700">Request purpose</label>
                                     <input type="text" v-model="CertRequest.request_purpose"
-                                        class="mt-1 block w-full text-black  border border-gray-300 rounded-md shadow-sm px-3 py-2" />
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700">Civil Status</label>
-
-                                    <select v-model="CertRequest.civilstatus"
-                                        class="mt-1 block w-full text-black  border border-gray-300 rounded-md shadow-sm px-3 py-2">
-                                        <option value="1">Single</option>
-                                        <option value="2">Married</option>
-                                        <option value="3">Widowed</option>
-                                        <option value="4">Separated</option>
-                                        <option value="5">Divorced</option>
-                                        <option value="6">Annulled</option>
-                                        <option value="7">Legally Separated</option>
-                                        <option value="8">In a Relationship</option>
-                                        <option value="9">Complicated</option>
-                                        <option value="10">Widower</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-gray-700">Month/Yrs in Barangay</label>
-                                    <input type="text" v-model="CertRequest.inBrgy"
                                         class="mt-1 block w-full text-black  border border-gray-300 rounded-md shadow-sm px-3 py-2" />
                                 </div>
                                 <div>

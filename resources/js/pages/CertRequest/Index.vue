@@ -17,16 +17,9 @@ interface CertRequestItem {
     last_name: string;
     suffix: string;
     email: string;
-    purok: string;
-    barangay: string;
-    city: string;
-    province: string;
-    date_of_birth: number;
     contact_number: string;
     request_type: string;
     request_purpose: string;
-    civilstatus: string;
-    inBrgy: string;
     request_date: string;
    
 }
@@ -61,13 +54,9 @@ const onEdit = (id) => {
                         <th class="px-6 py-3">Last Name</th>
                         <th class="px-6 py-3">Suffix</th>
                         <th class="px-6 py-3">Email</th>
-                        <th class="px-6 py-3">Purok</th>
-                        <th class="px-6 py-3">Date of birth</th>
                         <th class="px-6 py-3">Contact Number</th>
                         <th class="px-6 py-3">Request Type</th>
                         <th class="px-6 py-3">Request Purpose</th>
-                        <th class="px-6 py-3">Civil status</th>
-                        <th class="px-6 py-3">Month/Year in Barangay</th>
                         <th class="px-6 py-3">Request Date</th>
                     </tr>
                 </thead>
@@ -78,19 +67,17 @@ const onEdit = (id) => {
                         <td class="px-6 py-4">{{ row.last_name }}</td>
                         <td class="px-6 py-4">{{ row.suffix }}</td>
                         <td class="px-6 py-4">{{ row.email }}</td>
-                        <td class="px-6 py-4">{{ row.purok }}</td>
-                        <td class="px-6 py-4">{{ row.date_of_birth }}</td>
                         <td class="px-6 py-4">{{ row.contact_number }}</td>
                         <td class="px-6 py-4">{{ row.request_type }}</td>
                         <td class="px-6 py-4">{{ row.request_purpose }}</td>
-                        <td class="px-6 py-4">{{ row.civilstatus }}</td>
-                        <td class="px-6 py-4">{{ row.inBrgy }}</td>
                         <td class="px-6 py-4">{{ row.request_date }}</td>
                         
                         <td class="px-6 py-4">
-                            <span v-if="row.status === 'approved'" class="text-green-600">Approved</span>
-                            <span v-else-if="row.status === 'pending'" class="text-yellow-600">Pending</span>
-                            <span v-else class="text-red-600">Rejected</span>
+                            <button @click="onEdit(row.id)" class="text-blue-600 hover:text-blue-800">
+                                <span v-if="row.status === 'approved'" class="text-green-600">Approved</span>
+                                <span v-else-if="row.status === 'pending'" class="text-yellow-600">Pending</span>
+                                <span v-else class="text-red-600">Rejected</span>
+                            </button>
                         </td>
 
                     </tr>

@@ -39,7 +39,7 @@ const page = usePage();
             </div>
                 <!-- Left Content -->
                 <div class="w-full md:w-1/2 text-center md:text-left">
-                    <h4 class="uppercase text-sm tracking-widest mb-2">Request Certification Form</h4>
+                    <h4 class="uppercase text-sm tracking-widest mb-2">Student Request Certification Form</h4>
                     <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Certificate Online Request
                         System</h1>
                 </div>
@@ -53,8 +53,8 @@ const page = usePage();
         <section class="py-13 px-6 text-center">
             <h2 class="text-3xl font-bold text-gray-800 mb-4">Certificate Online-Request System</h2>
             <h3 class="text-xl font-semibold text-gray-800 mb-2">Request your certificate online</h3>
-            <p class="text-xl font-semibold text-gray-800 mb-2">For future development and enhancing the society's needs.</p>
-            <p>All rights reserved S.Y 2025-2026</p>
+            <p class="text-xl font-semibold text-gray-800 mb-2">For future development and enhancing the student's need.</p>
+            <p>All rights reserved S.Y 2026-2027</p>
         </section>
      </section>
     </div>

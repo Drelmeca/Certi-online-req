@@ -13,14 +13,8 @@ class CertRequest extends Model
         'last_name',
         'suffix',
         'email',
-        'purok',
-        'barangay',
-        'city',
-        'province',
-        'date_of_birth',
         'contact_number',
         'request_type',
-        'civilstatus',
         'status',
         'request_purpose'
     ];
