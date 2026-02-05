@@ -15,8 +15,9 @@ class CertRequest extends Model
         'email',
         'contact_number',
         'request_type',
+        'request_purpose',
         'status',
-        'request_purpose'
+        'attachment',
     ];
     public $timestamps = true;
 }

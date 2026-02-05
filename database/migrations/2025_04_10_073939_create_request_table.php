@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('contact_number',11)->nullable();
             $table->integer('request_type')->nullable();
             $table->string('request_purpose',50)->nullable();
-            $table->integer('civilstatus')->default(0)->nullable();
+            $table->dateTime('request_date')->nullable();
             $table->integer('status')->default(0)->nullable();
             $table->integer('attachment')->default(0)->nullable();
             $table->timestamps();

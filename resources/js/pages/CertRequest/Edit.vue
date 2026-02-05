@@ -56,6 +56,8 @@ const createCertRequest = () => {
             CertRequest.contact_number = '';
             CertRequest.request_type = '';
             CertRequest.request_purpose = '';
+            CertRequest.request_date = '';
+            
 
             router.visit('/CertRequest'); // Redirect to the index page after creation
             // Optionally, redirect or show a success message
