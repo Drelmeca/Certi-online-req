@@ -44,8 +44,8 @@ const page = usePage();
                         System</h1>
                 </div>
                 <!-- Right Image -->
-                <div class="w-full md:w-1/2 mb-20 md:mb-30">
-                    <img src="/images/hero.png" alt="Illustration" class="w-full max-w-md mx-auto">
+                <div class="w-full md:w-1/2 mb-20 md:mb-60">
+                    <img src="/images/uni.png" alt="Illustration" class="w-full max-w-md mx-auto rounded-full" />
                 </div>
             </div>
 
